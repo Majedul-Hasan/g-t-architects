@@ -34,20 +34,40 @@
     .flex{
         display: flex;
     }
+    .no-wrap{
+        white-space: nowrap;;
+    }
 
     header{
         background-color: #ff900e1a;
         padding: 45px 240px;
 
     }
-    nav
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 0;
+        position: relative;
+    }
+    nav .logo{
+        flex: 1;
+    }
+    .hidden-in-lg{
+        display: none;
+    }
 
     .nav-link a{
         color: #424242;
     }
     nav ul{
         list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
     }
+
 
     /* subtitle:  #727272 */
     /* title: #131313 */
@@ -56,12 +76,93 @@
     
     
     /* small device */
-    /* @media screen and (max-width: 576px){ */
+    @media screen and (max-width: 576px){
+        header{
+           
+            padding: 25px 20px;
+    
+        }
+        nav ul li.hidden{
+            display: none;
+        }
+        
+        .nav-links:hover .hidden-in-lg{
+            display: none;
+        }
+        nav ul{
+            flex-direction: column;
+            position: absolute;
+            align-items: stretch;
+            top: 10px;
+            right: 0;
+        }
+        .nav-links:hover{
+             background-color: #FF900E;
+
+         }
+       
+        .nav-links:hover  li.hidden{
+            display: block;
+            padding: 5px 10px;
+            
+              /* position: absolute; */
+            /* top: 10px; */
+            /* left: 45% */
+        }
+        .hidden-in-lg{
+            display: block;
+            background-color: transparent;
+        }
+
+    }
 
 
 
 /* mediam device  */
 @media screen and (min-width: 577px) and (max-width:992px){
+    header{
+           
+        padding: 25px 20px;
+
+    }
+    /* nav ul li.hidden{
+        display: none;
+    }
+    
+    .nav-links:hover .hidden-in-lg{
+        display: none;
+    }
+    nav ul{
+        flex-direction: column;
+        position: absolute;
+        align-items: stretch;
+        top: 10px;
+        right: 0;
+    }
+    .nav-links:hover{
+         background-color: #FF900E;
+
+     }
+   
+    .nav-links:hover  li.hidden{
+        display: block;
+        padding: 5px 10px;
+        
+          /* position: absolute; */
+        /* top: 10px; */
+        /* left: 45% */
+    /* }*/ */
+    .hidden-in-lg{
+        display: block;
+        background-color: transparent;
+    } 
+    nav .logo{
+        flex: 1;
+    }
+    nav ul{
+        flex: auto;
+    }
+
 
 } 
 /* BORO device */
