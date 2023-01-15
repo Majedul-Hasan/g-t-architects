@@ -324,7 +324,13 @@ footer .social{
     text-align: center;
     
 }
-
+.text-center{
+    text-align: center;
+}
+.x-center{
+    margin-left:auto !important ;
+    margin-right: auto !important;
+}
     /* subtitle:  #727272 */
     /* title: #131313 */
     /* orange #FF900E */
